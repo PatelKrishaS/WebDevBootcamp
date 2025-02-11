@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flexbox Pricing Table</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+    
+    body{
+    margin: 0;
+    padding: 0;
+    background-color: #865DFF;
+    }
+
+    .pricing-container{
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+        height: 120vh;
+        align-items: center;
+    }
+
+    .pricing-container > * {
+    margin: 3rem;
+    text-align: center;
+    background-color: #191825;
+    color: #FFA3FD;
+    border-radius: 20px;
+    padding: 2rem;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 300px;
+    box-shadow: 0px 7px 10px #865DFF,
+                0px 7px 10px #FFA3FD;
+}
+
+    .plan-title{
+        margin-bottom: 1.5rem;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: 400;
+        font-size: 1.1rem;
+        font-weight: bolder;
+        background: linear-gradient(90deg,#191825,#865DFF, #FFA3FD);
+        color: white;
+        border-radius: 10px;
+        padding: 0.3rem;
+    }
+
+    .plan-price{
+    font-weight: 900;
+    font-size: 2rem;
+    }
+
+    li{
+    text-align: left;
+    list-style: none;
+    line-height: 2;
+    display:flex;
+    align-items: center;
+    }
+
+    img{
+    margin-right:1rem ;
+}
+
+.plan-button{
+    padding: 0.5rem;
+    border-radius: 6px;
+    border: none;
+    background-color:#191825;
+    border: 3px solid #865DFF;
+    color: #865DFF;
+    font-size: 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    text-shadow: 0px 0px 25px #865DFF;
+    transition: all 400ms;
+    box-shadow: inset 0px 1px 5px #865DFF,
+                inset 1px -1px 5px #865DFF;
+}
+
+.plan-button:hover{
+    color: #FFA3FD;
+    background-color: #191825;
+    box-shadow: inset 0px 1px 5px #865DFF,
+                inset 1px -1px 5px #865DFF,
+                2px 2px 10px #865DFF;
+    transform: translateY(-3px);
+    text-shadow: 0px 0px 25px #FFA3FD;
+
+}
+.plan-button:focus{
+    transform: translateY(3px);
+    transition: all 400ms;
+    transform: scale(0.9);
+}
+
+    
+
+      /* Hint: What can you do with a media query and flexbox? */
+      @media (max-width: 1180px) {
+    .pricing-container {
+      flex-direction: column;
+      height: 100%;
+    }
+  }
+    </style>
+  </head>
+
+  <body>
+    <div class="pricing-container">
+      <div class="pricing-plan">
+        <div class="plan-title">Basic</div>
+        <div class="plan-price">$9.99/month</div>
+        <ul class="plan-features">
+          <li><img src="https://www.freeiconspng.com/uploads/accept-tick-icon-12.png" alt="accept" height="20px"> 10GB Storage</li>
+          <li><img src="https://www.freeiconspng.com/uploads/accept-tick-icon-12.png" alt="accept" height="20px"> 1 User</li>
+          <li><img src="https://www.transparentpng.com/thumb/red-circle/full-red-circle-transparent-png-ciEMku.png" alt="negative" height="25px"> Support</li>
+        </ul>
+        <button class="plan-button">Sign Up</button>
+      </div>
+      <div class="pricing-plan">
+        <div class="plan-title">Standard</div>
+        <div class="plan-price">$19.99/month</div>
+        <ul class="plan-features">
+          <li><img src="https://www.freeiconspng.com/uploads/accept-tick-icon-12.png" alt="accept" height="20px"> 50GB Storage</li>
+          <li><img src="https://www.freeiconspng.com/uploads/accept-tick-icon-12.png" alt="accept" height="20px"> 5 Users</li>
+          <li><img src="https://www.freeiconspng.com/uploads/accept-tick-icon-12.png" alt="accept" height="20px"> Phone &amp; Email Support</li>
+        </ul>
+        <button class="plan-button">Sign Up</button>
+      </div>
+      <div class="pricing-plan">
+        <div class="plan-title">Premium</div>
+        <div class="plan-price">$49.99/month</div>
+        <ul class="plan-features">
+          <li><img src="https://www.freeiconspng.com/uploads/accept-tick-icon-12.png" alt="accept" height="20px"> 100GB Storage</li>
+          <li><img src="https://www.freeiconspng.com/uploads/accept-tick-icon-12.png" alt="accept" height="20px"> 10 Users</li>
+          <li><img src="https://www.freeiconspng.com/uploads/accept-tick-icon-12.png" alt="accept" height="20px"> 24/7 Support</li>
+        </ul>
+        <button class="plan-button">Sign Up</button>
+      </div>
+    </div>
+  </body>
+</html>
